@@ -181,27 +181,23 @@
 // /comments https://jsonplaceholder.typicode.com/comments
 //  conseguir id, name
 
-async function post() {
-    const respuesta =await fetch("https://jsonplaceholder.typicode.com/posts")
-    const info =await respuesta.json()
-    return info;
-}
+//async function post() {
+    //const respuesta =await fetch("https://jsonplaceholder.typicode.com/posts")
+    //const info =await respuesta.json()
+   // return info;
+//}
 
-async function comments() {
-    const respuesta=await fetch("https://jsonplaceholder.typicode.com/comments")
-    const info = await respuesta.json()
-    return info;
+//async function comments() {
+   // const respuesta=await fetch("https://jsonplaceholder.typicode.com/comments")
+    //const info = await respuesta.json()
+   // return info;
     
-}
+//}
 
-function mostrar (info){
-    for(const element of info){
-        console.log (element.id,"//",element.name)
-    }
-}
+//function mostrar (info){
+    //for(const element of info){
+        //console.log (element.id,"//",element.name)
+    //}
+//}
 
-async function iniciar() {
-    const info =await comments()
-    mostrar (info)
-}
-iniciar
+
