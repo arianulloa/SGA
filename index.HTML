@@ -3,24 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="alumnos.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
     <title>SGA</title>
 </head>
 <body>
-    <h1>Sistema de gestion academica</h1>
-    <h2 form id="formAlumno">Tabla de alumnos</h2>
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre">
-    <br><br>
-    <label for="carrera">Carrera</label>
-    <input type="carrera" id="carrera">
-    <br><br>
-    <label for="correo">Correo Electronico</label>
-    <input type="text" id="correo">
-    <br><br>
-    <button type="submit">Guardar</button>
-    <hr>
-    <h2>Alumnos Registrados</h2>
-    <ul id="lista Alumnos"></ul>
-    <p>Proyecto de programacion</p>
-</body>
+       <header>
+         <h1>Sistema de gestion academica</h1>
+       </header>
+     <main>
+        <section class="formulario">
+             <h2 form id="formAlumno">Tabla de alumnos</h2>
+        <form id="formAlumno">
+             <label for="nombre">Nombre</label>
+                <input type="text" id="nombre"><br><br>
+      
+             <label for="carrera">Carrera</label>
+                <input type="carrera" id="carrera"><br><br>
+
+             <label for="correo">Correo Electronico</label>
+                <input type="text" id="correo"><br><br>
+      
+             <button type="submit">Guardar</button>
+             </form>
+            <p id="mensaje" class="oculto"></p>
+        </section>
+      
+      <section class="alumnos">
+         <h2>Alumnos Registrados</h2>
+          <p>Proyecto de programacion</p>
+          <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+             </thead>
+              <tbody id="listaAlumnos">
+
+              </tbody>
+             </table>
+      </section>
+     </main>
+   </body>
+ </form>
 </html>
