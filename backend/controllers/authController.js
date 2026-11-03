@@ -1,5 +1,5 @@
-const Usuario = required ("../models/Usuario")
-const bcrypt = required ("bcrypt")
+const Usuario = require ("../models/Usuario")
+const bcrypt = require ("bcrypt")
 
 const login = async (req,res)=>{
     try{
@@ -11,7 +11,7 @@ const login = async (req,res)=>{
             })
         }
         
-        const usuario = await Usuario.findOne({email:email.trim().tolowercase()}).select("+password")
+        const usuario = await Usuario.findOne({email:email.trim().toLowerCase()}).select("+password")
 
         if (!usuario){
             return res.status(400).json({
@@ -22,7 +22,7 @@ const login = async (req,res)=>{
         const coincide = await bcrypt.compare(password,usuario.password)
 
         if(!coincide){
-            return res.estatus(401).json({
+            return res.status(401).json({
                 mensaje:" Email o contraseña incorrecta"
             })
         }
@@ -32,13 +32,13 @@ const login = async (req,res)=>{
             nombre:usuario.nombre,
             email: usuario.email,
             rol: usuario.rol
-
         })
     } catch (error){
         console.error("Error en login",error)
         return res.status(500).json({
             mensaje:"Error interno del servidor"
         })
-    }
+       }
 }
-module.exports={login}
+
+   module.exports = {login}

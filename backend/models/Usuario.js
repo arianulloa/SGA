@@ -1,14 +1,14 @@
-const Mongoose = requiered ("mongoose")
+const mongoose = require ("mongoose")
 
 
-const usuarioSchema = new Mongoose.Shema({
+const usuarioSchema = new mongoose.Schema({
       nombre:{
         type: String,
-        requiered: true,
+        required: true,
       },
       email:{
          type: String,
-         requiered: true,
+         required: true,
          unique: true,
          lowercase: true,
          trim: true,
@@ -27,6 +27,6 @@ const usuarioSchema = new Mongoose.Shema({
         versionKey: false
     })
      
-    const Usuario = Mongoose.model("Usuario",usuarioSchema)
+    const Usuario = mongoose.model("Usuario",usuarioSchema)
 
-    module.exports= Usuario
+    module.exports = Usuario
