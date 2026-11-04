@@ -58,3 +58,36 @@ Content-Type: application/json
      "email": "admin@sga.com",
      "password": "ClaveDeprueba123!"
 }
+
+###############
+
+GET http://localhost:3000/materias
+
+###
+GET http://localhost:3000/materias/PRG1
+
+###
+POST http://localhost:3000/materias
+Content-Type: application/json
+
+{
+    "codigo": "BD1",
+    "nombre": "Origranacuiion",
+    "descripcion": "Materia en la cual se enseña leyes",
+    "cargahoraria": 3,
+    "estado": "Activa"
+}
+
+###
+PUT http://localhost:3000/materias/PRG1
+Content-Type: application/json
+
+{
+    "nombre": "Programacion 4 ",
+    "descripcion": "Materia en la cual se practiva diferentes lenguajes de codigo",
+    "cargahoraria": 2,
+    "estado": "Inactiva"
+}
+
+####
+DELETE http://localhost:3000/materias/PRG1
